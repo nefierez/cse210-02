@@ -13,7 +13,6 @@ def printBoard(board):
     print("---------")
     print(board[6] + " | " + board[7] + " | " + board[8])
 
-
 # take player input
 def playerInput(board):
     inp = int(input("Select a spot 1-9: "))
@@ -21,7 +20,6 @@ def playerInput(board):
         board[inp-1] = currentPlayer
     else:
         print("Oops player is already at that spot.")
-
 
 # check for win or tie
 def checkHorizontle(board):
@@ -48,7 +46,6 @@ def checkRow(board):
         winner = board[3]
         return True
 
-
 def checkDiag(board):
     global winner
     if board[0] == board[4] == board[8] and board[0] != "-":
@@ -57,7 +54,6 @@ def checkDiag(board):
     elif board[2] == board[4] == board[6] and board[4] != "-":
         winner = board[2]
         return True
-
 
 def checkIfWin(board):
     global gameRunning
@@ -76,14 +72,12 @@ def checkIfWin(board):
         print(f"The winner is {winner}!")
         gameRunning = False
 
-
 def checkIfTie(board):
     global gameRunning
     if "-" not in board:
         printBoard(board)
         print("It is a tie!")
         gameRunning = False
-
 
 # switch player
 def switchPlayer():

@@ -1,0 +1,18 @@
+Class Cards will hold cards between 1 and 13
+•	Method or constructor(self) will initiate two attributes
+o	self.value will be 0 (card number)
+o	self.points will be 300
+•	Method shuffle(self)
+o	will pick a random card number and will assign its value to the value attribute
+
+Class Director will direct the game
+•	Method or constructor(self) will initiate four attributes
+o	self.card will hold and display the random card number (integer)
+o	self.is_playing = True (Boolean)
+o	self.score = will display if the player win or lose points
+o	self.total_score = will display the total game points
+•	Method start_game(self) will start the game by running the main game loop with 3 methods or formulas
+o	Method keep_playing(self) will receive the player’s confirmation to play
+o	Method get_inputs(self) will receive the player guessing number
+o	Method do_updates(self) will update the player’s score
+o	Method do_outputs(self) will ask the player if they want to keep playing

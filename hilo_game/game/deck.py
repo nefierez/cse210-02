@@ -1,15 +1,16 @@
 import random
 
-class Card:
+class Deck:
     """A deck that holds 13 cards. The responsibility of Cards is to assign the card number drawn by the dealer to the
     self.value variable.
 
     Attributes:
         value (int): Will hold the card number drawn by the dealer."""
     def __init__(self):
-        self.value = 0
-        self.points = 300
-
-    def shuffle(self):
-        self.value = random.randint(1, 13)
-        self.points = self.points + 100 if self.value == True else self.points - 75
+        self.cards = [*range(1,14,1)]
+        random.shuffle(self.cards)
+    
+    def draw_card(self):
+        if len(self.cards) > 0:
+            return self.cards.pop()
+        return None

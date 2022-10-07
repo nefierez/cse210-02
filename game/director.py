@@ -24,3 +24,26 @@ class Director:
            self.score += cards.points
            self.total_score += self.score
         
+def do_output(self):
+
+    """Display the players score based on if they guessed right.
+    Args: 
+        Self (Director): An instance of Director.
+    """
+    if not self.is_playing:
+        return
+
+    if ((self.guess == "h" and self.current_card > self.previous_card) or
+    (self.guess == "l" and self.current_card < self.previous_card)):
+        self.points += 100
+
+    elif ((self.guess == "l" and self.current_card > self.previous_card) or
+    (self.guess == "h" and self.current_card < self.previous_card)):
+        self.points -= 75
+
+    print(f'Your score is: {self.points}')
+    
+    if self.points <= 0:
+        self.is_playing = False
+        print('')
+        print('Game over. You ran out of points.')

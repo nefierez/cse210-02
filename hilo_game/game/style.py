@@ -1,4 +1,5 @@
 class style():
+    """ atahe responsability to the style class is to enhance visually the outputs"""
     CYAN = '\033[96m'
     ENDC = '\033[0m'
     UNDERLINE = '\033[4m' 

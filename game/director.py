@@ -5,6 +5,15 @@ class Director:
     """A person who directs the game. 
     The responsibility of a Director is to control the sequence of play.
     """
+    def __int__(self):
+        #cosntructor a new director.
+
+        #Args:
+        #self (Director): An instance of Director-
+
+        self.card = ()
+        self.is_playing = True
+        self.score = 300
        
     def start_game(self):
         while self.is_playing:

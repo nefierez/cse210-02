@@ -5,9 +5,16 @@ class Director:
     """A person who directs the game. 
     The responsibility of a Director is to control the sequence of play.
     """
+    """ Attributes:
+
+        dice (list): Number of the card dranw by the dealer.
+        is_playing (boolean): Whether or not the game is being played.
+        score (int): The player wins 100 points if their guess is correct, they lose 75 points if not.
+        total_score (int): The score for the entire game."""
+
+
     def __int__(self):
         #cosntructor a new director.
-
         #Args:
         #self (Director): An instance of Director-
 

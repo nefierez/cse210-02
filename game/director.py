@@ -28,6 +28,17 @@ class Director:
             self.do_updates()
             self.do_outputs()
 
+    def get_inputs():
+        
+        if points == 0:
+            print('Sorry, you have lost the game.')
+        else:
+            answer = print(input('Would you like to continue? Y/N'))
+            if answer == 'Y'.upper:
+                print('Higher or lower?') 
+            else:              
+                print('Thank you for playing.')
+
     def do_updates(self):
        #updates the playe's score.
        #Args:
